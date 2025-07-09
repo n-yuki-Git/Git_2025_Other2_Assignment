@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-	    <meta charset="UTF-8">
-	    <title>Quiz</title>
-	</head>
-	<body>
-		<script src="Quiz.js"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .quiz-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .option {
+            margin: 10px 0;
+        }
+        
+        .submit-btn {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            システム開発の早い段階で、目に見える形で利用者の要求が確認できるように確認用のソフトウェアを作成するソフトウェア開発モデルとして、最も適切なものはどれか。
+        </div>
+        
+        <div class="option">
+            <input type="radio" name="answer" value="0" id="option0">
+            <label for="option0">アジャイル</label>
+        </div>
+        <div class="option">
+            <input type="radio" name="answer" value="1" id="option1">
+            <label for="option1">ウォーターフォール</label>
+        </div>
+        <div class="option">
+            <input type="radio" name="answer" value="2" id="option2">
+            <label for="option2">スパイラル</label>
+        </div>
+        <div class="option">
+            <input type="radio" name="answer" value="3" id="option3">
+            <label for="option3">プロトタイピング</label>
+        </div>
+        
+        <button class="submit-btn" onclick="checkAnswer()">解答する</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="Quiz.js"></script>
+</body>
 </html>
